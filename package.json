@@ -2,7 +2,7 @@
   "name": "project_2",
   "version": "1.0.0",
   "private": true,
-  "description": "Личный проект «project»",
+  "description": "TEST for Emfy",
   "devDependencies": {
     "autoprefixer": "6.5.3",
     "browser-sync": "2.18.2",

@@ -38,14 +38,6 @@
   }
 }
 
-.main-menu__dropdown {
-  display: none;
-}
-
-.main-menu__item:hover .main-menu__dropdown {
-  display: block;
-}
-
 .main-menu__link {
   display: block;
   padding: 15px 20px 15px 40px;
@@ -57,6 +49,7 @@
   color: inherit;
 
   border-bottom: 2px solid $nav-border-color;
+  cursor: pointer;
 }
 
 @media #{$mobile-widths-only} {
@@ -75,6 +68,10 @@
   .main-menu--nojs .main-menu__list {
     display: block;
   }
+
+  .main-menu--nojs .main-menu__dropdown {
+    display: block;
+  }
 }
 
 /* --------------- tablet ------------------ */
@@ -85,6 +82,10 @@
 
   .main-menu__item {
     cursor: pointer;
+  }
+
+  .main-menu__item:hover .main-menu__dropdown {
+    display: block;
   }
 
   .main-menu__item--submenu .main-menu__link {

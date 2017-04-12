@@ -1,4 +1,6 @@
 .page-nav {
+  position: relative;
+
   background: $menu-bg-color;
 }
 
@@ -10,11 +12,6 @@
   text-align: center;
 
   border-bottom: 2px solid $nav-border-color;
-
-  @include icon-phone();
-  &::before {
-    right: 20px;
-  }
 }
 
 .page-nav__logo-link {
@@ -32,9 +29,20 @@
 }
 
 .page-nav__contacts {
-  display: none;
+  position: absolute;
+  top: 30px;
+  right: 20px;
 
   color: $title-color;
+}
+
+.page-nav__phone {
+  font-size: 0;
+  line-height: 0;
+}
+
+.page-nav__phone-info {
+  display: none;
 }
 
 /* --------------- tablet ------------------ */
@@ -88,6 +96,8 @@
 
   .page-nav__contacts {
     position: relative;
+    top: 0;
+    right: 0;
 
     display: block;
     margin-top: 15px;
@@ -95,21 +105,22 @@
     padding-left: 55px;
 
     background-color: #eff1f2;
-
-    @include icon-phone();
-    &::before {
-      left: 20px;
-    }
   }
 
   .page-nav__phone {
     font-size: 14px;
     line-height: 24px;
     font-weight: bold;
+    text-decoration: none;
+    color: $title-color;
   }
 
-  .page-nav__phone-info {
-    display: none;
+  .page-nav__icon-phone {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
   }
 }
 
