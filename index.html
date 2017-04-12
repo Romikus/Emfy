@@ -6,8 +6,116 @@
     <meta name="description" content="Описание">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>TEST</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
+    <div class="page-wrapper">
+      <aside class="page-nav">
+        <div class="page-nav__logo">
+          <a href="#" class="page-nav__logo-link">TEST</a>
+        </div>
+        <nav class="page-nav__menu main-menu main-menu--closed main-menu--nojs">
+          <button class="main-menu__toggle" type="button">Открыть меню</button>
+          <ul class="main-menu__list">
+            <li class="main-menu__item main-menu__item--submenu">
+              <a class="main-menu__link">Каталог</a>
+              <div class="main-menu__dropdown submenu">
+                <ul class="submenu__list">
+                  <li class="submenu__item"><a href="" class="submenu__link">Усилители</a></li>
+                  <li class="submenu__item"><a href="" class="submenu__link">Инверторы</a></li>
+                  <li class="submenu__item"><a href="" class="submenu__link">Преобразователи</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-menu__item main-menu__item--submenu">
+              <a class="main-menu__link">Клиентам</a>
+              <div class="main-menu__dropdown submenu">
+                <ul class="submenu__list">
+                  <li class="submenu__item"><a href="" class="submenu__link">Произовдство</a></li>
+                  <li class="submenu__item"><a href="" class="submenu__link">Документация</a></li>
+                  <li class="submenu__item"><a href="" class="submenu__link">Доставка</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-menu__item main-menu__item--submenu">
+              <a class="main-menu__link">Статьи</a>
+              <div class="main-menu__dropdown submenu">
+                <ul class="submenu__list">
+                  <li class="submenu__item"><a href="" class="submenu__link">Статья-1</a></li>
+                  <li class="submenu__item"><a href="" class="submenu__link">Статья-2</a></li>
+                  <li class="submenu__item"><a href="" class="submenu__link">Статья-3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">О нас</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="page-nav__delivery delivery">
+          <form class="delivery__filter" action="#" method="get" name="City">
+            <select class="delivery__city" name="city-name">
+              <option value="Moscow">Москва</option>
+              <option value="St. Petersburg">Санкт-Петербург</option>
+              <option value="Nizhny Novgorod">Нижний Новгород</option>
+              <option value="Ekaterinbur">Екатеринбург</option>
+            </select>
+          </form>
+          <a href="#" class="delivery__info"><strong class="delivery__text">Доставка:</strong> от 500 рублей</a>
+        </div>
+        <div class="page-nav__contacts">
+          <span class="page-nav__phone">8 (123) 456-78-90</span><br>
+          <span class="page-nav__phone-info">ежедневно с 9:00 до 18:00</span>
+        </div>
+      </aside>
+      <main class="page-main">
+        <header class="page-main__header breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">TEST</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link">Усилители</a></li>
+          </ul>
+        </header>
+        <article class="page-main__content product">
+          <header class="product__header">
+            <h1 class="product__title">Усилители TEST</h1>
+            <ul class="product__description-list">
+              <li class="product__description-item">В зонах слабого сигнала усиление достигает 10 и более раз!</li>
+              <li class="product__description-item">Установка и настройка занимает 5 минут и не требует особых умений.</li>
+              <li class="product__description-item">Если усилитель не поможет... такого не может быть, от точно поможет!</li>
+            </ul>
+          </header>
+          <section class="product__features features">
+            <h2 class="features__title">Преимущества наших усилителей</h2>
+            <ul class="features__list">
+              <li class="features__item features__item--power">
+                <h3 class="features__name">Максимальное усиление</h3>
+                <p class="features__desc">Высокий коэффициент усиления сигнала на всех доступных частотах.</p>
+              </li>
+              <li class="features__item features__item--plane">
+                <h3 class="features__name">Две плоскости передачи</h3>
+                <p class="features__desc">Передает и усиливает сигнал в двух плоскостях.</p>
+              </li>
+              <li class="features__item features__item--range">
+                <h3 class="features__name">Работа в двух диапазонах</h3>
+                <p class="features__desc">Поддержка двух частотных диапазонов.</p>
+              </li>
+              <li class="features__item features__item--signal">
+                <h3 class="features__name">Цифровой сигнал</h3>
+                <p class="features__desc">Оцифровка предварительно усилнного сигнала.</p>
+              </li>
+              <li class="features__item features__item--compatibility">
+                <h3 class="features__name">Совместимость с любыми источниками</h3>
+                <p class="features__desc">Усилители подходят для усиления сигнала любого источника.</p>
+              </li>
+              <li class="features__item features__item--chill">
+                <h3 class="features__name">Морозостойкий корпус</h3>
+                <p class="features__desc">Усилитель имеет морозоустойчивый корпус.</p>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

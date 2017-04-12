@@ -1,0 +1,23 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin icon-phone() {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+
+    width: 25px;
+    height: 24px;
+
+    background: url(../img/icon-phone.svg) no-repeat 0 0;
+    cursor: pointer;
+
+    transform: translateY(-50%);
+  }
+}

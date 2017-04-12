@@ -1,0 +1,15 @@
+.page-main {
+  background: $bg-color;
+}
+
+.page-main__content {
+  margin: 0 20px;
+}
+
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .page-main {
+    flex-grow: 1;
+  }
+}

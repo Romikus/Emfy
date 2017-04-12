@@ -1,0 +1,138 @@
+.page-nav {
+  background: $menu-bg-color;
+}
+
+.page-nav__logo {
+  position: relative;
+
+  padding: 20px 50px;
+
+  text-align: center;
+
+  border-bottom: 2px solid $nav-border-color;
+
+  @include icon-phone();
+  &::before {
+    right: 20px;
+  }
+}
+
+.page-nav__logo-link {
+  display: inline-block;
+
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  text-decoration: none;
+  color: $title-color;
+
+  &:hover {
+    color: rgba($title-color,0.5);
+  }
+}
+
+.page-nav__contacts {
+  display: none;
+
+  color: $title-color;
+}
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .page-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    flex-basis: 215px;
+    flex-shrink: 0;
+  }
+
+  .page-nav__logo {
+    padding: 18px 0;
+
+    border-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .page-nav__logo-link {
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  .page-nav__menu {
+    padding: 0 20px;
+  }
+
+  .page-nav__delivery {
+    position: relative;
+
+    margin-top: auto;
+    padding-top: 23px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background: linear-gradient(to right, transparent, $nav-border-color, transparent);
+    }
+  }
+
+  .page-nav__contacts {
+    position: relative;
+
+    display: block;
+    margin-top: 15px;
+    padding: 15px 20px;
+    padding-left: 55px;
+
+    background-color: #eff1f2;
+
+    @include icon-phone();
+    &::before {
+      left: 20px;
+    }
+  }
+
+  .page-nav__phone {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  .page-nav__phone-info {
+    display: none;
+  }
+}
+
+/* --------------- desktop ------------------ */
+@media #{$desktop-widths} {
+  .page-nav {
+    flex-basis: 255px;
+  }
+
+  .page-nav__logo-link {
+    font-size: 62px;
+    line-height: 70px;
+  }
+
+  .page-nav__contacts {
+    padding: 15px 10px 10px 60px;
+  }
+
+  .page-nav__phone {
+    font-size: 18px;
+  }
+
+  .page-nav__phone-info {
+    display: block;
+  }
+}

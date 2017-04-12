@@ -1,0 +1,125 @@
+.main-menu__toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 22px;
+  height: 22px;
+  margin-top: 35px;
+  margin-left: 20px;
+
+  font-size: 0;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.main-menu--closed .main-menu__toggle {
+  background: transparent url("../img/icon-menu-open.svg") no-repeat;
+}
+
+.main-menu--opened .main-menu__toggle {
+  background: transparent url("../img/icon-menu-close.svg") no-repeat;
+}
+
+.main-menu__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-menu__item {
+  color: $menu-font-color;
+
+  &:hover {
+    color: $dominant-color;
+  }
+}
+
+.main-menu__dropdown {
+  display: none;
+}
+
+.main-menu__item:hover .main-menu__dropdown {
+  display: block;
+}
+
+.main-menu__link {
+  display: block;
+  padding: 15px 20px 15px 40px;
+
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+
+  border-bottom: 2px solid $nav-border-color;
+}
+
+@media #{$mobile-widths-only} {
+  .main-menu--nojs .main-menu__toggle {
+    display: none;
+  }
+
+  .main-menu--closed .main-menu__list {
+    display: none;
+  }
+
+  .main-menu--opened .main-menu__list {
+    display: block;
+  }
+
+  .main-menu--nojs .main-menu__list {
+    display: block;
+  }
+}
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .main-menu__toggle {
+    display: none;
+  }
+
+  .main-menu__item {
+    cursor: pointer;
+  }
+
+  .main-menu__item--submenu .main-menu__link {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      border: 6px solid transparent;
+      border-left-color: #9fa3a6;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  .main-menu__item--submenu:hover {
+    .main-menu__link::before {
+      border: 6px solid transparent;
+      border-top-color: #9fa3a6;
+
+      transform: none;
+    }
+  }
+
+  .main-menu__link {
+    padding: 12px 0;
+
+    font-size: 16px;
+    font-weight: normal;
+
+    border: 0;
+  }
+}
+
+

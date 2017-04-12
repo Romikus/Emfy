@@ -1,0 +1,18 @@
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .page-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    background: $bg-color;
+  }
+}
+
+/* --------------- desktop ------------------ */
+@media #{$desktop-widths} {
+  .page-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}

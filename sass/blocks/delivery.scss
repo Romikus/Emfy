@@ -1,0 +1,35 @@
+.delivery {
+  display: none;
+}
+
+.delivery__info {
+  color: $body-font-color;
+}
+
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .delivery {
+    display: block;
+    padding: 0 20px;
+  }
+
+  .delivery__filter {
+    margin-bottom: 15px;
+  }
+
+  .delivery__city {
+    width: 100%;
+    height: 32px;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: $title-color;
+
+    background: #fff;
+    border: 1px solid $nav-border-color;
+    border-radius: 3px;
+
+    outline: none;
+  }
+}
